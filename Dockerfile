@@ -1,6 +1,6 @@
 FROM ubuntu:latest
-LABEL "author:Ganesh K"
-RUN apt-get install -y httpd zip unzip
+LABEL "author"="Ganesh K"
+RUN apt-get update && apt-get install -y apache2 zip unzip
 # copying website url
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page281/nurgo.zip /var/www/html/
 WORKDIR /var/www/html
