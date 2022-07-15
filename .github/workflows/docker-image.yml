@@ -21,4 +21,6 @@ jobs:
         docker build . --file Dockerfile --tag my-image-name
         docker run -d --name my-app2 -p8000:80 my-image-name
         docker tag my-image-name 00010009/deploy-website
+        docker login -u 00010009 -p ${{ secret.DOCKERHUB_PWD }}
+        docker push 00010009/deploy-website
         
