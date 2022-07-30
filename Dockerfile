@@ -8,4 +8,4 @@ run cp -rvf html/* /var/www/html
 WORKDIR /var/www/html
 #RUN unzip nurgo.zip && cp -rvf nurgo/* . && rm -rf nurgo nurgo.zip
 EXPOSE 80
-CMD ["/usr/sbin/apachectl", "-D", "FOREGROUND"
+CMD ["/usr/sbin/apachectl", "-D", "FOREGROUND"]
